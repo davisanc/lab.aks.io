@@ -190,6 +190,22 @@ If you are not connected to the correct subscription, list your subscriptions an
 kubectl get nodes
 ```
 
+![image of get nodes](/images/get_nodes.png)
+
+Tunnel into your AKS cluster: Create an SSH tunnel linking a local port (8001) on your machine to port 80 on the management node of the cluster. Execute the command below replacing the values as follows:
+
+```markdown
+az aks browse --name MyDemos-AKS --resource-group MyDemos-RG 
+```
+![image of aks browse](/images/aks_browse.png)
+
+K8s dashboard will be open in our browser
+
+![image of dashboard](/images/dashboard.png)
+
+### Step7: Create the DVWA application from the container
+
+
 ```markdown
 Syntax highlighted code block
 
