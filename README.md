@@ -33,22 +33,32 @@ Update the Ubuntu packages and install Docker engine, node.js and the node packa
  sudo apt-get update && sudo apt install docker-ce nodejs npm
  Now, upgrade the Ubuntu packages to the latest version by typing the following in a single line command. When asked if you would like to proceed, respond by typing “y” and pressing enter
 
+```markdown
  sudo apt-get upgrade
- When the command has completed, check the Docker version installed by executing this command. 
+ ```
+ When the command has completed, check the Docker version installed by executing this command
 
+```markdown
 Docker version
+```
 
 Download the dvwa image from docker hub
-
+```markdown
 docker pull vulnerables/web-dvwa
+```
 
 Run docker image on build-VM. If you want your host port and container port on 80,
+
+```markdown
 docker run --rm -it -p 80:80 vulnerables/web-dvwa
+```
 
 You may want to change the host port
 
 Write a dockerfile to expose port 8080
+```markdown
 EXPOSE 8080
+```
 
 Create your docker image with the dockerfile
 
