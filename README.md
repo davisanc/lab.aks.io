@@ -205,6 +205,22 @@ K8s dashboard will be open in our browser
 
 ### Step7: Create the DVWA application from the container
 
+Now we deploy the DVWA web service using the K8s dashboard
+
+* From the Kubernetes dashboard, select Create in the top right corner
+* From the Resource creation view, select Create an App
+* Give the app a name, followed by the container image (with your ACR Login Server), 1 pod, Service Internal, Port and Target Port equals to 80
+* CPU to 0.125 and Memory to 128
+
+![image of create app](/images/create_app.png)
+
+![image of create app2](/images/create_app2.png)
+
+Now navigate to your deployments to see the DVWA container is successfully deployed
+
+![image of deployments](/images/deployments.png)
+
+### Step 8: Create a public Load Balancer to access the DVWA from the outside
 
 ```markdown
 Syntax highlighted code block
