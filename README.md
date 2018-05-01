@@ -5,7 +5,8 @@ This is a follow up from a previous post , where you can set up a Damn Vulnerabl
 Now, I would like to run the DVWA within a container using the Azure Container Service (AKS), where Azure manages your hosted Kubernetes environment
 
 Detail documentation about Azure AKS is [here](https://docs.microsoft.com/en-us/azure/aks/)
-### Markdown
+
+### Step1: Work on your Build-VM
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
