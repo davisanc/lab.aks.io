@@ -222,6 +222,12 @@ Now navigate to your deployments to see the DVWA container is successfully deplo
 
 ### Step 8: Create a public Load Balancer to access the DVWA from the outside
 
+Any external access to Kubernetes pods requires a load balancer. We will define the DVWA service with the type LoadBalancer in the YAML description, so you can access the web application using the public IP.  When you change the type of the service to LoadBalancer, the AKS will create a public-facing load balancer with a public IP address.
+
+* From the navigation menu, select Services under Discovery and Load Balancing. From the view’s Services list, select the DVWA service. 
+* Select Edit. 
+* From the Edit a Service dialog, scroll down to the type setting and change it from ClusterIP to LoadBalancer. Select Update to save the changes.
+
 ```markdown
 Syntax highlighted code block
 
