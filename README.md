@@ -1,4 +1,4 @@
-## Azure Container Service (AKS) - Runnind a Damn Vulnerable Web Application on AKS
+## Azure Container Service (AKS) - Running a Damn Vulnerable Web Application on AKS
 
 You can use the [editor on GitHub](https://github.com/davisanc/lab.aks.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
