@@ -116,6 +116,13 @@ Open Kubernetes dashboard:
 Az aks browse -g MyDemos-RG --name MyDemos-AKS
 ```
 
+### Step4: Create an ACR
+
+In the Azure Portal, navigate to the ACR you created in Before the hands-on lab.
+Select Access keys under Settings on the left-hand menu.
+
+
+
 ```markdown
 Syntax highlighted code block
 
