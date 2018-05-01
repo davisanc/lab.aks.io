@@ -14,7 +14,7 @@ On your ubuntu Build-VM, create a dvwa folder and pull the docker image
 https://hub.docker.com/r/vulnerables/web-dvwa/
 
 Update the Ubuntu packages and install curl and support for repositories over HTTPS in a single step by typing the following in a single line command. When asked if you would like to proceed, respond by typing “y” and pressing enter.
- # sudo apt-get update && sudo apt install apt-transport-https ca-certificates curl software-properties-common
+'<sudo apt-get update && sudo apt install apt-transport-https ca-certificates curl software-properties-common>'
 
 Add Docker’s official GPG key by typing the following in a single line command
 
