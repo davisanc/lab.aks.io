@@ -64,6 +64,14 @@ Create your docker image with the dockerfile
 
 Check your docker images
 
+##Step2: Create a Service Principal
+
+```markdown
+az ad sp create-for-rbac --role='Contributor' --scope="/subscriptions/60e79550-d86a-4c92-a4e1-c7faa8c6ae74" --name="MyDemos-sp-sol"
+```
+
+
+
 
 ```markdown
 Syntax highlighted code block
