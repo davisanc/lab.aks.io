@@ -153,6 +153,42 @@ In the Azure Portal, navigate to your ACR account, and select Repositories under
 
 ### Step6: Deploy the DVWA to your Kubernetes cluster
 
+Assuming you have az installed on your machine. I like to run these commands from my PC, using Virtual Studio Code
+
+```markdown
+Az --version
+```
+
+check the installation of the Kubernetes CLI (kubectl) by running the following command
+
+```markdown
+Kubectl version
+```
+
+Login into your Azure subscription
+
+```markdown
+Az login
+```
+
+Verify that you are connected to the correct subscription with the following command to show your default subscription:
+
+```markdown
+Az account show
+```
+
+If you are not connected to the correct subscription, list your subscriptions and then set the subscription by its id with the following commands
+
+```markdown
+ az account list
+ az account set --subscription {id}
+ ```
+ 
+ Test that the configuration is correct by running a simple kubectl command to produce a list of nodes: 
+
+```markdown
+kubectl get nodes
+```
 
 ```markdown
 Syntax highlighted code block
