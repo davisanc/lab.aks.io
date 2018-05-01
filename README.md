@@ -121,6 +121,37 @@ Az aks browse -g MyDemos-RG --name MyDemos-AKS
 In the Azure Portal, navigate to the ACR you created in Before the hands-on lab.
 Select Access keys under Settings on the left-hand menu.
 
+![image of keys](/images/access_keys.png)
+
+### Step5: Prepare your docker image and push it to ACR
+
+On your build VM, login to your ACR with the ACR access keys
+
+```markdown
+docker login [LOGINSERVER] –u [USERNAME] –p [PASSWORD]
+```
+
+Run the following commands to properly tag your images to match your ACR account name. 
+
+```markdown
+docker tag vulnerables/web-dvwa [LOGINSERVER]/web-dvwa
+```
+
+![image of docker tag](/images/docker_tag.png)
+
+push docker image to ACR
+
+```markdown
+docker push [LOGINSERVER]/web-dvwa
+```
+
+![image of docker push](/images/docker_push.png)
+
+In the Azure Portal, navigate to your ACR account, and select Repositories under Services on the left-hand menu. 
+
+![image of acr_account](/images/acr_account.png)
+
+### Step6: Deploy the DVWA to your Kubernetes cluster
 
 
 ```markdown
