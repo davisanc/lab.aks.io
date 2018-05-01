@@ -1,6 +1,7 @@
 ## Azure Container Service (AKS) - Running a Damn Vulnerable Web Application on AKS
 
-You can use the [editor on GitHub](https://github.com/davisanc/lab.aks.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This is a follow up from a previous post , where you can set up a Damn Vulnerable Web Application (DVWA from now on) to test the Azure WAF to protect your Web Application [link to https://blogs.msdn.microsoft.com/ukhybridcloud/2018/03/20/azure-waf-to-protect-your-web-application/] 
+Now, I would like to run the DVWA within a container using the Azure Container Service (AKS), where Azure manages your hosted Kubernetes environment
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
