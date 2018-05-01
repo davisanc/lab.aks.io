@@ -71,7 +71,50 @@ az ad sp create-for-rbac --role='Contributor' --scope="/subscriptions/60e79550-d
 ```
 ![image of sp](/images/service_principal.png)
 
+### Step3: Create a RG and AKS Cluster
 
+```markdown
+az login
+```
+Create your Resource Group:
+```markdown
+az group create --name MyDemos-AKS --location westeurope
+```
+
+Create your cluster (by default it will use 3 nodes)
+
+```markdown
+az aks create --name MyDemos-AKS -g MyDemos-RG --generate-ssh-keys --kubernetes-version 1.9.6
+```
+
+Install kubectl:
+
+```markdown
+az aks install-cli
+```
+
+Instruct kubectl to connect to your AKS cluster:
+
+```markdown
+az aks get-credentials --name MyDemos-AKS -g MyDemos-RG
+```
+
+Check you have 3 nodes running:
+
+```markdown
+Kubectl get nodes
+```
+
+Check you are in the current context:
+```markdown
+kubectl config current-context
+```
+
+Open Kubernetes dashboard:
+
+```markdown
+Az aks browse -g MyDemos-RG --name MyDemos-AKS
+```
 
 ```markdown
 Syntax highlighted code block
