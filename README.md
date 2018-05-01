@@ -225,33 +225,24 @@ Now navigate to your deployments to see the DVWA container is successfully deplo
 Any external access to Kubernetes pods requires a load balancer. We will define the DVWA service with the type LoadBalancer in the YAML description, so you can access the web application using the public IP.  When you change the type of the service to LoadBalancer, the AKS will create a public-facing load balancer with a public IP address.
 
 * From the navigation menu, select Services under Discovery and Load Balancing. From the view’s Services list, select the DVWA service. 
-* Select Edit. 
-* From the Edit a Service dialog, scroll down to the type setting and change it from ClusterIP to LoadBalancer. Select Update to save the changes.
+* Select Edit 
+* From the Edit a Service dialog, scroll down to the type setting and change it from ClusterIP to LoadBalancer. Select Update to save the changes
 
-```markdown
-Syntax highlighted code block
+![image of loadbalancer](/images/LoadBalancer.png)
 
-# Header 1
-## Header 2
-### Header 3
+Once the service is update you can see the public ip address assigned to the Azure Load Balancer
 
-- Bulleted
-- List
+![image of services](/images/services.png)
 
-1. Numbered
-2. List
+Now check you can access the application with your browser
 
-**Bold** and _Italic_ and `Code` text
+![image of browse](/images/browse.png)
 
-[Link](url) and ![Image](src)
-```
+The Load Balancer is created as part of the AKS infrastructure in Azure. When we created the AKS cluster, there are 2 RG created (this is done by design): one containing your K8S master controller and another one containing the rest of the infrastructure needed (nodes, load balancers, NSG, Route tables, NIC, Disks, etc)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+![image of k8sinfra](/images/k8sinfra.png)
 
-### Jekyll Themes
+And we can see there is a Fronted IP configuration with the Public IP address to access the DVWA 
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/davisanc/lab.aks.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+![image of publicip](/images/publicip.png)
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
