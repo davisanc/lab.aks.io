@@ -17,12 +17,17 @@ Update the Ubuntu packages and install curl and support for repositories over HT
 
 ```markdown
 sudo apt-get update && sudo apt install apt-transport-https ca-certificates curl software-properties-common
+```
 
 Add Docker’s official GPG key by typing the following in a single line command
 
+```markdown
  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
- Add Docker’s stable repository to Ubuntu packages list by typing the following in a single line command.
+ ```
+ Add Docker’s stable repository to Ubuntu packages list by typing the following in a single line command
+ ```markdown
  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+```
 
 Update the Ubuntu packages and install Docker engine, node.js and the node package manager in a single step by typing the following in a single line command. When asked if you would like to proceed, respond by typing “y” and pressing enter.
  sudo apt-get update && sudo apt install docker-ce nodejs npm
