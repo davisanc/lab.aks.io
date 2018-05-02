@@ -239,7 +239,7 @@ Now check you can access the application with your browser
 
 The Load Balancer is created as part of the AKS infrastructure in Azure. When we created the AKS cluster, there are 2 RG created (this is done by design): one containing your K8S master controller and another one containing the rest of the infrastructure needed (nodes, load balancers, NSG, Route tables, NIC, Disks, etc)
 
-![image of k8sinfra](/images/k8sinfra.png)
+![image of k8sinfra](/images/k8infra.jpg)
 
 And we can see there is a Fronted IP configuration with the Public IP address to access the DVWA 
 
