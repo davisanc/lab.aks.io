@@ -153,8 +153,6 @@ docker push [LOGINSERVER]/web-dvwa
 
 In the Azure Portal, navigate to your ACR account, and select Repositories under Services on the left-hand menu. 
 
-![image of acr_account](/images/acr_account.png)
-
 ### Step6: Deploy the DVWA to your Kubernetes cluster
 
 Assuming you have az installed on your machine. I like to run these commands from my PC, using Virtual Studio Code
