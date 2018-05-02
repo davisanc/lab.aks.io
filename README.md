@@ -243,5 +243,5 @@ The Load Balancer is created as part of the AKS infrastructure in Azure. When we
 
 And we can see there is a Fronted IP configuration with the Public IP address to access the DVWA 
 
-![image of publicip](/images/publicip.png)
+![image of publicip](/images/pip.jpg)
 
